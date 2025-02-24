@@ -47,7 +47,9 @@
       "router": {
         "origin": false
       },
-      "eas": {}
+      "eas": {
+        "projectId": "4c311a18-4765-49e9-b49d-516dcae3588d"
+      }
     },
     "owner": "hces100"
   }
