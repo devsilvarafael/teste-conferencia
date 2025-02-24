@@ -10,6 +10,7 @@ export default function Index() {
       }}
     >
       <Text>Teste Rafael</Text>
+      <Text>Update automatico, testando</Text>
     </View>
   );
 }
