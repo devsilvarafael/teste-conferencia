@@ -1,6 +1,9 @@
 import React from "react";
-import { Button, Text, View, Alert } from "react-native";
+import { Button, View, Alert } from "react-native";
 import * as Updates from "expo-updates";
+import { Card } from "@/components/ui/card";
+import { Heading } from "@/components/ui/heading";
+import { Text } from "@/components/ui/text";
 
 export default function Index() {
   const checkForUpdates = async () => {
@@ -24,7 +27,7 @@ export default function Index() {
         Alert.alert("No Updates", "You are already using the latest version.");
       }
     } catch (error) {
-      Alert.alert("Error", "An error occurred while checking for updates.");
+      Alert.alert("Error", error.message);
       console.error(error);
     }
   };
@@ -38,12 +41,15 @@ export default function Index() {
       }}
     >
       <Text>Teste Rafael</Text>
-      <Text>Update automatico, testando</Text>
-      <Text>Update automatico, testando</Text>
-      <Text>Update automatico, testando</Text>
-      <Text>Update automatico, testando</Text>
 
       <Button title="Atualizar app" onPress={checkForUpdates} />
+
+      <Card size="md" variant="elevated" className="m-3">
+        <Heading size="md" className="mb-1">
+          Quick Start
+        </Heading>
+        <Text size="sm">Start building your next project in minutes</Text>
+      </Card>
     </View>
   );
 }
